@@ -23,6 +23,14 @@
     "./tuning": {
       "source": "./src/tuning.ts",
       "default": "./src/tuning.ts"
+    },
+    "./cameraGlide": {
+      "source": "./src/cameraGlide.ts",
+      "default": "./src/cameraGlide.ts"
+    },
+    "./cameraInput": {
+      "source": "./src/cameraInput.ts",
+      "default": "./src/cameraInput.ts"
     }
   },
   "scripts": {
@@ -33,7 +41,14 @@
     "react-dom": ">=18.0.0"
   },
   "peerDependenciesMeta": {
-    "react": { "optional": true },
-    "react-dom": { "optional": true }
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "vitest": "4.1.6"
   }
 }

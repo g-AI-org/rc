@@ -27,3 +27,26 @@ export function parseSettingsTable(consoleText: string): TuningParameter[] {
   }
   return list;
 }
+
+export interface GainParam {
+  name: string;
+  value: number;
+  min: number;
+  max: number;
+}
+
+export function createDefaultBalaXGains(): GainParam[] {
+  return [
+    { name: "k_angle", value: 65, min: 0, max: 300 },
+    { name: "k_rate", value: 2, min: 0, max: 50 },
+    { name: "k_angle_i", value: 2400, min: 0, max: 10000 },
+    { name: "k_rate_i", value: 10, min: 0, max: 200 },
+    { name: "k_yaw", value: 4, min: 0, max: 50 },
+    { name: "k_distance", value: 300, min: 0, max: 2000 },
+    { name: "k_speed", value: 9, min: 0, max: 100 },
+    { name: "motor_gain", value: 0.5, min: 0, max: 2 },
+    { name: "deadband", value: 5, min: 0, max: 40 },
+    { name: "punch", value: 5, min: 0, max: 40 },
+    { name: "trim", value: 0, min: -30, max: 30 },
+  ];
+}
