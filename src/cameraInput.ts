@@ -129,8 +129,8 @@ function isBabylonArcRotateCamera(
 
 /**
  * Duck-typed Babylon.js scene interface for checking whether a pointerdown
- * landed on a clickable / interactive 3D mesh (one with an `actionManager`
- * that has triggers, or custom `metadata.clickable`).
+ * landed on an interactive 3D mesh (one with an `actionManager` or
+ * custom `metadata.clickable`).
  */
 export interface BabylonPickableSceneLike {
   pick?(
@@ -140,7 +140,7 @@ export interface BabylonPickableSceneLike {
       isPickable?: boolean;
       isVisible?: boolean;
       isEnabled?: () => boolean;
-      actionManager?: { hasSpecificTriggers?: boolean } | null;
+      actionManager?: object | null;
       metadata?: { clickable?: boolean } | null;
     }) => boolean
   ): { hit?: boolean; pickedMesh?: unknown } | null;
