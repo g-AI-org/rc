@@ -1,0 +1,39 @@
+{
+  "name": "@g-ai/rc",
+  "version": "0.1.0",
+  "description": "Shared low-latency remote control, telemetry diagnostics, touch joysticks, video playout, and live tuning library for 0SFS, gdog-remote, and esp32-bot/balax-remote",
+  "type": "module",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./diagnostics": {
+      "source": "./src/diagnostics.ts",
+      "default": "./src/diagnostics.ts"
+    },
+    "./transport": {
+      "source": "./src/transport.ts",
+      "default": "./src/transport.ts"
+    },
+    "./controls": {
+      "source": "./src/controls.ts",
+      "default": "./src/controls.ts"
+    },
+    "./tuning": {
+      "source": "./src/tuning.ts",
+      "default": "./src/tuning.ts"
+    }
+  },
+  "scripts": {
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true },
+    "react-dom": { "optional": true }
+  }
+}
