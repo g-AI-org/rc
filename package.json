@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Shared low-latency remote control, telemetry diagnostics, touch joysticks, video playout, and live tuning library for 0SFS, gdog-remote, and esp32-bot/balax-remote",
   "type": "module",
+  "license": "AGPL-3.0-only",
   "exports": {
     ".": {
       "source": "./src/index.ts",
